@@ -6,12 +6,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Murach's Java Servlets and JSP</title>
+        <link rel="stylesheet" href="styles/main.css" type="text/css"/>
     </head>
     <body>
         <h1> Join Our Email</h1>
         <p>To Join Our Email list, enter your name and email address below.</p>
         <form action="emailList" method="post">
-            <input type="hidden" name="action" value="add"/>
+            <input type="hidden" name="action" value="add">
             
             <label>Email:</label>
             <input type="email" name="email" required><br>
@@ -25,5 +26,6 @@
             <label>&nbsp;</label>
             <input type="submit" value="Join Now" id="submit">
         </form>
+        <a href="emailList?action=checkAnchor">Check Anchor</a>
     </body>
 </html>
