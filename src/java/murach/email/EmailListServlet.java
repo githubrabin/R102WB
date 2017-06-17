@@ -32,12 +32,22 @@ public class EmailListServlet extends HttpServlet {
             String firstName=request.getParameter("firstName");
             String lastName=request.getParameter("lastName");
             String email=request.getParameter("email");
+            String message;
             
             User user=new User(firstName,lastName,email);
             //UserDB.insert(user);
-            
+            if(firstName==null || lastName==null || email==null || firstName.isEmpty() || lastName.isEmpty() || email.isEmpty())
+            {
+                message="Please fill out all the three text boxes.";
+                url="/index.jsp";
+            }
+            else
+            {
+                message="";
+                url="/thanks.jsp";
+            }
             request.setAttribute("user", user);
-            url="/thanks.jsp";
+            request.setAttribute("message", message);
         }
         else if(action.equals("checkAnchor"))
         {
