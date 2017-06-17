@@ -28,5 +28,6 @@
             <input type="submit" value="Join Now" id="submit">
         </form>
         <a href="emailList?action=checkAnchor">Check Anchor</a>
+       
     </body>
 </html>
