@@ -38,6 +38,7 @@ public class EmailListServlet extends HttpServlet {
             //UserDB.insert(user);
             if(firstName==null || lastName==null || email==null || firstName.isEmpty() || lastName.isEmpty() || email.isEmpty())
             {
+                log("Email: " + email);
                 message="Please fill out all the three text boxes.";
                 url="/index.jsp";
             }

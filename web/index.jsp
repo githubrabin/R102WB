@@ -1,14 +1,4 @@
-
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Murach's Java Servlets and JSP</title>
-        <link rel="stylesheet" href="styles/main.css" type="text/css"/>
-    </head>
-    <body>
+<%@include file="/header.jsp" %>
         <h1> Join Our Email</h1>
         <p>To Join Our Email list, enter your name and email address below.</p>
         <p><i>${message}</i></p>
@@ -29,5 +19,4 @@
         </form>
         <a href="emailList?action=checkAnchor">Check Anchor</a>
        
-    </body>
-</html>
+        <%@include file="/footer.jsp" %>

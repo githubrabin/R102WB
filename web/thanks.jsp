@@ -12,12 +12,23 @@
         <h1>Thanks for joining our email list</h1>
         <p>Here is the information that you entered:</p>
         
-        <label>Email:</label>
+        <%-- <label>Email:</label>
         <span>${user.firstName}</span>
         <label>First Name:</label>
         <span>${user.lastName}</span>
         <label>Last Name:</label>
-        <span>${user.email}</span>
+        <span>${user.email}</span> --%>
+        
+        <jsp:useBean id="user" scope="request" class="murach.business.User"/>
+        <label>Email: </label>
+        <span><jsp:getProperty name="user" property="email"/></span><br>
+        
+        <label>First Name:</label>
+        <span><jsp:getProperty name="user" property="firstName"/></span><br>
+        
+        <label>Last Name:</label>
+        <span><jsp:getProperty name="user" property="lastName"/></span><br>
+        
         
         <p>To Enter Another Email Address, Click on the Back button in your browser or the Return button shown below.</p>
         <form action="" method="get">
